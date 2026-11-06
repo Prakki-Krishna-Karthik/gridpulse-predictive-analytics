@@ -11,3 +11,5 @@ data/raw/
 # Generated local artifacts
 .codex-*/
 .chart-data-*/
+
+chatgpt_explanation_pack/
