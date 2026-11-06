@@ -1,0 +1,87 @@
+{
+  "features": [
+    {
+      "name": "local net flow",
+      "group": "local time series",
+      "source": "net_flow",
+      "formula": "observed country net flow at t",
+      "reason": "The target's recent history gives the model an autoregressive anchor."
+    },
+    {
+      "name": "local load",
+      "group": "local time series",
+      "source": "Actual_Total_Load_MW",
+      "formula": "observed country load at t",
+      "reason": "Demand pressure changes the likely transfer requirement."
+    },
+    {
+      "name": "local imbalance",
+      "group": "local time series",
+      "source": "flow_imbalance_ratio",
+      "formula": "inflow/outflow imbalance signal",
+      "reason": "Large imbalance separates stable transfer from directional stress."
+    },
+    {
+      "name": "local load residual",
+      "group": "local time series",
+      "source": "load_residual",
+      "formula": "actual load - day-ahead forecast",
+      "reason": "Forecast misses can precede unexpected flow changes."
+    },
+    {
+      "name": "global net flow",
+      "group": "network context",
+      "source": "all country net_flow",
+      "formula": "mean(net flow across countries)",
+      "reason": "A node's forecast is conditioned on the system-wide state."
+    },
+    {
+      "name": "global load",
+      "group": "network context",
+      "source": "all country load",
+      "formula": "mean(load across countries)",
+      "reason": "Shared demand conditions propagate through interconnectors."
+    },
+    {
+      "name": "global imbalance",
+      "group": "network context",
+      "source": "all country imbalance",
+      "formula": "mean(abs(imbalance) across countries)",
+      "reason": "System-wide directional pressure provides context around a node."
+    },
+    {
+      "name": "global residual",
+      "group": "network context",
+      "source": "all country load residual",
+      "formula": "mean(abs(residual) across countries)",
+      "reason": "Collective forecast error can signal an unstable operating period."
+    },
+    {
+      "name": "degree centrality",
+      "group": "static graph",
+      "source": "canonical graph",
+      "formula": "degree(node)/(N-1)",
+      "reason": "A node with more neighbors has more pathways for pressure to move."
+    },
+    {
+      "name": "closeness centrality",
+      "group": "static graph",
+      "source": "canonical graph",
+      "formula": "inverse mean shortest-path distance",
+      "reason": "A node's graph proximity gives a compact connectivity context."
+    },
+    {
+      "name": "betweenness centrality",
+      "group": "static graph",
+      "source": "canonical graph",
+      "formula": "fraction of shortest paths through node",
+      "reason": "Bridge nodes can matter to rerouting decisions."
+    }
+  ],
+  "feature_count": 11,
+  "tensor_shape": [
+    12,
+    960,
+    11
+  ]
+}

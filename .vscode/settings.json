@@ -1,0 +1,14 @@
+{
+  "files.exclude": {
+    "**/.codex*": true,
+    "**/*codex*": true,
+    "**/*chatgpt*": true,
+    "**/.chart-data-*": true
+  },
+  "search.exclude": {
+    "**/.codex*": true,
+    "**/*codex*": true,
+    "**/*chatgpt*": true,
+    "**/.chart-data-*": true
+  }
+}

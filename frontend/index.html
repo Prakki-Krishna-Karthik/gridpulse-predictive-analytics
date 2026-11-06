@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08111f" />
+    <title>GridPulse | Cross-border grid intelligence</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Project navigation">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <div class="brand-name">GRID<span>/</span>PULSE</div>
+            <div class="brand-subtitle">cross-border intelligence</div>
+          </div>
+        </div>
+
+        <nav class="nav-list">
+          <a class="nav-item active" href="#overview"><span class="nav-icon">◈</span>Command view</a>
+          <a class="nav-item" href="#graph-intelligence"><span class="nav-icon">◎</span>Graph intelligence</a>
+          <a class="nav-item" href="#forecast"><span class="nav-icon">⌁</span>Forecast lab</a>
+          <a class="nav-item" href="#model-lab"><span class="nav-icon">∿</span>Model evidence</a>
+          <a class="nav-item" href="#recommendations"><span class="nav-icon">↗</span>Prescriptions</a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="connection-card">
+          <div class="eyebrow">SYSTEM HEALTH</div>
+          <div class="health-row"><span class="status-dot" id="healthDot"></span><strong id="healthLabel">Connecting</strong><span class="mono muted" id="healthVersion">API</span></div>
+          <div class="health-meta" id="healthMeta">Waiting for local replay service</div>
+        </div>
+
+        <div class="mode-card">
+          <div class="eyebrow">REPLAY MODE</div>
+          <div class="mode-buttons" role="group" aria-label="Replay mode">
+            <button class="mode-button active" id="liveModeButton" type="button">Live pulse</button>
+            <button class="mode-button" id="historyModeButton" type="button">History</button>
+          </div>
+          <label class="range-label" for="replaySlider"><span>Timeline</span><span class="mono" id="timelineLabel">Latest</span></label>
+          <input id="replaySlider" type="range" min="0" max="959" value="959" aria-label="Historical replay timeline" />
+        </div>
+
+        <div class="sidebar-foot mono">v1.0 / research build<br />recommendation-only guardrail</div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Predictive analytics</span><b>/</b><span class="current">GridPulse</span></div>
+          <div class="topbar-actions">
+            <div class="live-badge"><span class="live-dot"></span><span id="streamLabel">LIVE REPLAY</span></div>
+            <span class="timestamp mono" id="currentTimestamp">--</span>
+            <button class="icon-button" id="refreshButton" title="Refresh dashboard" type="button">↻</button>
+          </div>
+        </header>
+
+        <section class="hero-section">
+          <div>
+            <div class="eyebrow accent">GRAPH-BASED PREDICTIVE + PRESCRIPTIVE ANALYTICS</div>
+            <h1>See the grid<br /><em>before it moves.</em></h1>
+            <p class="hero-copy">A data-quality-aware network twin for cross-border flows. Watch observed transfer, forecasted pressure, and explainable actions move together.</p>
+            <div class="hero-tags"><span id="networkTag">12 nodes · 24 canonical links</span><span>2022 — 2024 dataset</span><span>Chronological validation</span></div>
+          </div>
+          <div class="hero-aside">
+            <div class="hero-aside-label">RESEARCH MODEL</div>
+            <div class="selected-model" id="selectedModel">Loading…</div>
+            <div class="model-reason" id="modelReason">Selecting from walk-forward evidence</div>
+            <div class="model-spark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </section>
+
+        <section class="kpi-grid" aria-label="Network key performance indicators">
+          <article class="kpi-card cyan"><div class="kpi-label">ACTIVE TRANSFER</div><div class="kpi-value" id="kpiTransfer">--</div><div class="kpi-foot">observed directional magnitude <span class="trend-up">●</span></div></article>
+          <article class="kpi-card coral"><div class="kpi-label">NODES TO REVIEW</div><div class="kpi-value" id="kpiNodes">--</div><div class="kpi-foot">warning or critical screening score</div></article>
+          <article class="kpi-card amber"><div class="kpi-label">LINK PRESSURE</div><div class="kpi-value" id="kpiPressure">--</div><div class="kpi-foot">highest observed-flow utilization</div></article>
+          <article class="kpi-card mint"><div class="kpi-label">DATA CONFIDENCE</div><div class="kpi-value" id="kpiConfidence">--</div><div class="kpi-foot">quality-aware, not engineering certainty</div></article>
+        </section>
+
+        <section class="panel how-panel" aria-label="How to read the live grid">
+          <div class="panel-header"><div><div class="eyebrow">PLAIN-LANGUAGE GUIDE</div><h2>How the grid makes a decision</h2></div><span class="pulse-badge">WATCH → EXPLAIN → TEST</span></div>
+          <div class="how-steps">
+            <div class="how-step"><span class="how-number">01</span><div><strong>Dots are countries</strong><p>Each dot is a country node. Its size and color show the current screening pressure from flow imbalance and load residual.</p></div></div>
+            <div class="how-step"><span class="how-number">02</span><div><strong>Lines carry power</strong><p>Moving particles show the direction of observed transfer. A thicker line means more of the observed-flow envelope is being used.</p></div></div>
+            <div class="how-step"><span class="how-number">03</span><div><strong>Colors are early warnings</strong><p>Green has room, amber needs investigation, and red is the first link the scenario planner tries to relieve.</p></div></div>
+            <div class="how-step"><span class="how-number">04</span><div><strong>Rerouting is a test</strong><p>The planner removes a chosen share, searches connected links, rejects unsafe headroom, and draws the best surviving path in purple.</p></div></div>
+          </div>
+        </section>
+
+        <section class="main-grid">
+          <article class="panel topology-panel">
+            <div class="panel-header">
+              <div><div class="eyebrow">NETWORK TOPOLOGY</div><h2>Cross-border pulse</h2></div>
+              <div class="panel-actions"><span class="legend-item"><i class="legend-line"></i>flow path</span><span class="legend-item"><i class="legend-node"></i>node state</span><button class="small-button" id="fitNetworkButton" type="button">Fit network</button></div>
+            </div>
+            <div class="topology-legend"><span><i class="swatch normal"></i>Normal</span><span><i class="swatch warning"></i>Warning</span><span><i class="swatch critical"></i>Critical</span><span class="legend-note">Proxy envelope ≠ thermal rating</span></div>
+            <div class="topology-stage" id="topologyStage">
+              <svg id="topologySvg" viewBox="0 0 920 540" role="img" aria-label="Animated map-like topology of the cross-border grid"></svg>
+              <div class="topology-callout" id="topologyCallout" hidden></div>
+              <div class="stage-corner mono">LIVE GRAPH / <span id="graphPointCount">--</span> POINTS</div>
+            </div>
+          </article>
+
+          <aside class="panel signal-panel">
+            <div class="panel-header"><div><div class="eyebrow">LIVE SIGNALS</div><h2>What changed</h2></div><span class="pulse-badge">AUTO</span></div>
+            <div class="signal-summary"><div class="signal-ring" id="signalRing"><span id="signalRingValue">--</span><small>risk</small></div><div><div class="signal-summary-title" id="signalSummaryTitle">Scanning network</div><div class="muted" id="signalSummaryCopy">Waiting for the first snapshot.</div></div></div>
+            <div class="risk-bars" id="riskBars"></div>
+            <div class="divider"></div>
+            <div class="eyebrow">TOP PRIORITIES</div>
+            <div class="mini-alert-list" id="miniAlertList"></div>
+            <button class="text-button" id="jumpRecommendations" type="button">Open recommendation queue <span>↗</span></button>
+          </aside>
+        </section>
+
+        <section class="panel graph-intelligence-panel" id="graph-intelligence" aria-label="Graph stress propagation and resilience analysis">
+          <div class="panel-header"><div><div class="eyebrow">GRAPH INTELLIGENCE</div><h2>Stress propagation + edge resilience</h2></div><span class="validation-chip graph-method-chip">TWO-STEP GRAPH SCREEN</span></div>
+          <div class="graph-summary-strip">
+            <div class="graph-summary-metric"><span>Most influential node</span><strong id="graphTopNode">--</strong></div>
+            <div class="graph-summary-metric"><span>Most critical edge</span><strong id="graphTopEdge">--</strong></div>
+            <div class="graph-summary-metric"><span>Topology alerts</span><strong id="graphCriticalCount">--</strong></div>
+          </div>
+          <div class="graph-intelligence-grid">
+            <div><div class="graph-ranking-title">Node influence after neighboring stress spreads</div><div class="graph-ranking-list" id="graphNodeInfluence"></div></div>
+            <div><div class="graph-ranking-title">Counterfactual edge-removal ranking</div><div class="graph-ranking-list" id="graphEdgeRanking"></div></div>
+          </div>
+          <div class="graph-analysis-note" id="graphAnalysisNote">Waiting for graph-analysis evidence.</div>
+        </section>
+
+        <section class="analytics-grid" id="forecast">
+          <article class="panel forecast-panel">
+            <div class="panel-header">
+              <div><div class="eyebrow">SHORT-HORIZON FORECAST</div><h2>Flow + load outlook</h2></div>
+              <div class="forecast-controls"><label class="select-wrap"><span>Country</span><select id="countrySelect"></select></label><label class="select-wrap"><span>Model</span><select id="modelSelect"></select></label></div>
+            </div>
+            <div class="chart-meta"><span><i class="chart-key load-key"></i>load MW</span><span><i class="chart-key flow-key"></i>net flow MW</span><span><i class="chart-key forecast-key"></i>model forecast</span><span><i class="chart-key band-key"></i>adaptive band</span><span class="chart-note" id="forecastNote">12-hour horizon</span></div>
+            <div class="chart-wrap"><svg id="forecastSvg" viewBox="0 0 840 330" role="img" aria-label="Forecast chart"></svg></div>
+            <div class="forecast-foot"><span id="forecastModelCopy">Model loading</span><span class="mono" id="forecastUpdated">--</span></div>
+          </article>
+
+          <article class="panel model-panel" id="model-lab">
+            <div class="panel-header"><div><div class="eyebrow">MODEL LAB</div><h2>Evidence first</h2></div><span class="validation-chip">LEAKAGE-SAFE</span></div>
+            <p class="panel-intro">Four transparent operational baselines compete on a chronological holdout. Fusion GRU and DCRNN are available through their trained PyTorch checkpoints for dashboard forecasting; the saved comparison remains visible as evaluation evidence.</p>
+            <div class="table-wrap"><table><thead><tr><th>Model</th><th>RMSE</th><th>MAE</th><th>MAPE*</th><th>Acc</th><th>Prec</th><th>Recall</th><th>F1</th><th>Status</th></tr></thead><tbody id="metricsBody"></tbody></table></div>
+            <div class="curve-block"><div class="curve-header"><span>Training window / validation trace</span><span class="mono">MAE · MW</span></div><svg id="curveSvg" viewBox="0 0 500 140" role="img" aria-label="Chronological validation curve"></svg></div>
+            <div id="researchEvidence" class="research-evidence"></div>
+          </article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel quality-panel">
+            <div class="panel-header"><div><div class="eyebrow">DATA CONTRACT</div><h2>Trust, with receipts</h2></div><span class="quality-score" id="qualityScore">--</span></div>
+            <div class="quality-list" id="qualityList"></div>
+            <div class="loss-warning"><div class="loss-icon">!</div><div><strong>Loss view is a transparent scenario proxy</strong><p>The app estimates resistance from centroid distance, copper resistivity, 2,000 mm² area, 400 kV, and 0.95 power factor. Replace these assumptions before engineering use.</p></div></div>
+          </article>
+
+          <article class="panel physics-panel">
+            <div class="panel-header"><div><div class="eyebrow">PHYSICS LENS</div><h2>Why distance matters</h2></div><span class="experiment-chip">SCENARIO PROXY</span></div>
+            <p class="panel-intro">Select a line in the counterfactual studio. Longer distance creates more resistance, so the same current creates more I²R loss.</p>
+            <div id="physicsLens" class="physics-flow"></div>
+            <div class="physics-equation mono">R = ρL/A &nbsp; · &nbsp; P<sub>loss</sub> = 3I²R</div>
+            <div class="physics-note">Centroid-to-centroid distance is not the surveyed route. This explains the trade-off; it does not authorize dispatch.</div>
+          </article>
+
+          <article class="panel whatif-panel">
+            <div class="panel-header"><div><div class="eyebrow">COUNTERFACTUAL STUDIO</div><h2>What if transfer shifts?</h2></div><span class="experiment-chip">SIMULATION</span></div>
+            <p class="panel-intro">Move a share of flow away from a stressed link. The planner searches connected links, scores distance, loss, and headroom, then shows its reasoning.</p>
+            <form id="whatIfForm" class="whatif-form">
+              <label class="select-wrap"><span>Target interconnector</span><select id="edgeSelect"></select></label>
+              <label class="range-label"><span>Share to move elsewhere</span><strong id="reductionValue">10%</strong></label>
+              <input id="reductionSlider" type="range" min="0" max="60" value="10" step="5" />
+              <button class="primary-button" type="submit">Simulate reroute <span>→</span></button>
+            </form>
+            <div id="whatIfResult" class="whatif-result empty">Choose a link to see projected headroom.</div>
+          </article>
+
+          <article class="panel recommendations-panel" id="recommendations">
+            <div class="panel-header"><div><div class="eyebrow">PRESCRIPTIVE QUEUE</div><h2>Investigate next</h2></div><span class="guardrail-chip">RECOMMENDATION ONLY</span></div>
+            <div class="recommendation-list" id="recommendationList"></div>
+          </article>
+        </section>
+
+        <footer class="footer"><span>GRID/PULSE · course project research build</span><span>Not a dispatch control system · validate every action with an engineer</span></footer>
+      </main>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

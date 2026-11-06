@@ -1,0 +1,87 @@
+I am a beginner in AI, machine learning, predictive analytics, and power-grid systems. Explain this complete project as if I know nothing about these subjects.
+
+Project title:
+Graph-Based Predictive and Prescriptive Analytics for Cross-Border Power Grid Networks.
+
+Please inspect the uploaded source code, datasets, documentation, frontend, backend, and results folder. Do not invent information. Use the actual implementation. Whenever possible, mention the filename where the information was found.
+
+Explain the project from beginning to end in very simple language.
+
+1. Explain the real-world problem and why cross-border power flow is difficult.
+2. Explain the dataset: files, rows, columns, countries, timestamps, units, and target values.
+3. Explain net flow using a simple example. Explain the meaning of positive and negative flow according to the actual dataset convention.
+4. Explain preprocessing: timestamp handling, sorting, duplicate removal, missing-value treatment, country-name normalization, merging of datasets, and train/validation/test splitting.
+5. Explain every extracted feature. Give the formula or direct meaning of each feature and explain why it is useful.
+6. Explain how the graph is constructed:
+   - countries as nodes;
+   - interconnectors as edges;
+   - latitude and longitude;
+   - distance between nodes;
+   - resistance and power-loss proxy;
+   - neighbors and graph centrality.
+7. Explain the complete next-hour net-flow prediction process with a small numerical example.
+8. Clearly separate the models actually used by the website from the offline research benchmark:
+   - Persistence;
+   - 24-hour Moving Average;
+   - Seasonal Naive;
+   - Linear Trend;
+   - Fusion GRU;
+   - DCRNN.
+   State which model the current website forecast endpoint uses and why it was selected. Do not claim that DCRNN powers the live page unless the code proves it.
+9. Explain DCRNN with a simple road-traffic or water-pipe analogy and a small country-network illustration.
+10. Explain model training: lookback window, target, normalization, loss function, epochs, validation, testing, and backpropagation.
+11. Explain every result and graph in the results folder, including:
+    - dataset profile;
+    - preprocessing summary;
+    - feature catalog;
+    - training versus validation curves;
+    - confusion matrix;
+    - ROC curve;
+    - precision-recall curve;
+    - model comparison;
+    - feature importance or ablation study;
+    - t-SNE or embedding plot;
+    - error analysis examples.
+12. Explain every metric with its formula and a small numerical example:
+    - MAE;
+    - RMSE;
+    - MAPE;
+    - accuracy;
+    - precision;
+    - recall;
+    - F1-score;
+    - confusion matrix;
+    - ROC-AUC;
+    - precision-recall.
+13. Explain why Fusion GRU and DCRNN may perform differently on this dataset.
+14. Explain prescriptive routing using a road-traffic analogy:
+    - how stress is detected;
+    - how the amount of power to move is calculated;
+    - how alternate paths are found;
+    - how headroom is calculated;
+    - how Critical links are rejected;
+    - how distance, utilization, and estimated loss rank the remaining paths;
+    - what Route Found, Best Effort, and No Route mean.
+15. Explain these equations in plain language:
+    R = rho * L / A
+    P_loss = 3 * I^2 * R
+    moved_MW = current_MW * reroute_percentage / 100
+    headroom = proxy_capacity - current_flow
+    route_cost = distance * (1 + 2.2 * utilization + 6 * loss_percentage)
+    Define every symbol and explain the assumptions.
+16. Explain the complete frontend-backend integration, API endpoints, charts, animations, and the purpose of each important library and framework.
+17. Explain what the changing values on the website mean. Clearly state whether they are real utility telemetry, historical replay, deterministic forecast, simulation, or a proxy estimate.
+18. Explain the limitations, safety concerns, ethics, and what would be needed before using this in a real control room.
+
+Use short paragraphs, numbered steps, simple examples, and text diagrams. Define every technical term when it first appears. Do not hide uncertainty.
+
+At the end provide:
+
+- a one-page beginner summary;
+- a 30-minute study plan;
+- a complete presentation/viva explanation;
+- 20 likely viva questions with answers;
+- what is genuinely novel in this project;
+- what is implemented, what is simulated, and what is only a research benchmark;
+- a final end-to-end workflow from raw CSV to prediction to routing recommendation.
+

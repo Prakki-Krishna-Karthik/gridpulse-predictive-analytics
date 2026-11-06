@@ -1,0 +1,109 @@
+{
+  "models": [
+    {
+      "model": "persistence",
+      "label": "Persistence",
+      "rmse": 580.3309231332947,
+      "mae": 375.8313492063492,
+      "mape": 0.6104239588805228,
+      "accuracy": 0.9136904761904762,
+      "precision": 0.8132774329475364,
+      "recall": 0.8107193507460174,
+      "f1": 0.8119921971430091,
+      "inference_time_ms": 0.44780000098398887,
+      "source": "existing chronological baseline artifact"
+    },
+    {
+      "model": "moving_average",
+      "label": "24h moving average",
+      "rmse": 1363.4297054290978,
+      "mae": 947.1078972387565,
+      "mape": 2.2760022666641304,
+      "accuracy": 0.8134920634920635,
+      "precision": 0.6151549110143771,
+      "recall": 0.5551255068446515,
+      "f1": 0.5791042789740966,
+      "inference_time_ms": 12.802599998394726,
+      "source": "existing chronological baseline artifact"
+    },
+    {
+      "model": "linear_trend",
+      "label": "Linear trend",
+      "rmse": 1604.8043534719247,
+      "mae": 1156.8869414071487,
+      "mape": 2.0561297576953828,
+      "accuracy": 0.7440476190476191,
+      "precision": 0.4967049041186653,
+      "recall": 0.5413830879905972,
+      "f1": 0.5123828207610922,
+      "inference_time_ms": 78.02409999931115,
+      "source": "existing chronological baseline artifact"
+    },
+    {
+      "model": "seasonal_naive",
+      "label": "Seasonal naive (24h)",
+      "rmse": 1994.6832993224098,
+      "mae": 1310.4915674603174,
+      "mape": 3.2422602885548324,
+      "accuracy": 0.753968253968254,
+      "precision": 0.5125321984801401,
+      "recall": 0.5190954119481628,
+      "f1": 0.5156238748127203,
+      "inference_time_ms": 0.5528000001504552,
+      "source": "existing chronological baseline artifact"
+    },
+    {
+      "model": "fusion_gru",
+      "label": "Fusion GRU",
+      "mae": 400.26220703125,
+      "rmse": 570.4879150390625,
+      "mape": 0.7097617387771606,
+      "accuracy": 0.9270833333333334,
+      "precision": 0.8519271866467988,
+      "recall": 0.8616847363471184,
+      "f1": 0.8564685137106244,
+      "inference_time_ms": 34.732400003122166,
+      "source": "trained in this experiment run"
+    },
+    {
+      "model": "dcrnn",
+      "label": "DCRNN",
+      "mae": 436.21551513671875,
+      "rmse": 633.9649658203125,
+      "mape": 0.7520692348480225,
+      "accuracy": 0.9250992063492064,
+      "precision": 0.8534980821228699,
+      "recall": 0.8273472134920672,
+      "f1": 0.8384719184223205,
+      "inference_time_ms": 63.63250000140397,
+      "source": "trained in this experiment run"
+    }
+  ],
+  "research_winner": {
+    "model": "fusion_gru",
+    "label": "Fusion GRU",
+    "mae": 400.26220703125,
+    "rmse": 570.4879150390625,
+    "mape": 0.7097617387771606,
+    "accuracy": 0.9270833333333334,
+    "precision": 0.8519271866467988,
+    "recall": 0.8616847363471184,
+    "f1": 0.8564685137106244,
+    "inference_time_ms": 34.732400003122166,
+    "source": "trained in this experiment run"
+  },
+  "operational_baseline": {
+    "model": "persistence",
+    "label": "Persistence",
+    "rmse": 580.3309231332947,
+    "mae": 375.8313492063492,
+    "mape": 0.6104239588805228,
+    "accuracy": 0.9136904761904762,
+    "precision": 0.8132774329475364,
+    "recall": 0.8107193507460174,
+    "f1": 0.8119921971430091,
+    "inference_time_ms": 0.44780000098398887,
+    "source": "existing chronological baseline artifact"
+  },
+  "selection_rule": "lowest pooled RMSE on the common chronological holdout"
+}

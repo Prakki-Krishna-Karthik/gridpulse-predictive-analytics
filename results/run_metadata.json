@@ -1,0 +1,54 @@
+{
+  "seed": 42,
+  "epochs": 40,
+  "sequence_length_hours": 24,
+  "window_stride_hours": 4,
+  "test_horizon_hours": 168,
+  "countries": [
+    "AT",
+    "BE",
+    "CH",
+    "CZ",
+    "DE",
+    "DK",
+    "FR",
+    "LU",
+    "NL",
+    "NO",
+    "PL",
+    "SE"
+  ],
+  "feature_names": [
+    "local net flow",
+    "local load",
+    "local imbalance",
+    "local load residual",
+    "global net flow",
+    "global load",
+    "global imbalance",
+    "global residual",
+    "degree centrality",
+    "closeness centrality",
+    "betweenness centrality"
+  ],
+  "train_samples": 1800,
+  "validation_samples": 504,
+  "test_samples": 2016,
+  "framework": "PyTorch Fusion GRU and DCRNN with NumPy/scikit-learn/Matplotlib result tooling",
+  "data_source": "data/processed artifacts generated from supplied CSVs",
+  "dcrnn": {
+    "input_shape": [
+      150,
+      24,
+      12,
+      11
+    ],
+    "hidden_size": 24,
+    "diffusion_steps": 2,
+    "transition_matrices": "forward and reverse row-normalized canonical graph adjacency",
+    "graph_edges": 24,
+    "train_samples": 150,
+    "validation_samples": 42,
+    "test_samples": 168
+  }
+}

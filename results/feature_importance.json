@@ -1,0 +1,92 @@
+{
+  "features": [
+    {
+      "feature": "local net flow",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 4108.0322265625,
+      "permutation_delta_mae": 3733.0908813476562,
+      "ablation_mae": 2368.26513671875,
+      "ablation_delta_mae": 1993.3237915039062
+    },
+    {
+      "feature": "local load",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 555.5927734375,
+      "permutation_delta_mae": 180.65142822265625,
+      "ablation_mae": 374.1180419921875,
+      "ablation_delta_mae": -0.82330322265625
+    },
+    {
+      "feature": "local imbalance",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 482.78643798828125,
+      "permutation_delta_mae": 107.8450927734375,
+      "ablation_mae": 395.8121337890625,
+      "ablation_delta_mae": 20.87078857421875
+    },
+    {
+      "feature": "betweenness centrality",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 472.13665771484375,
+      "permutation_delta_mae": 97.1953125,
+      "ablation_mae": 410.1600341796875,
+      "ablation_delta_mae": 35.21868896484375
+    },
+    {
+      "feature": "closeness centrality",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 445.65093994140625,
+      "permutation_delta_mae": 70.7095947265625,
+      "ablation_mae": 392.0685729980469,
+      "ablation_delta_mae": 17.127227783203125
+    },
+    {
+      "feature": "degree centrality",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 425.3584289550781,
+      "permutation_delta_mae": 50.417083740234375,
+      "ablation_mae": 393.9554748535156,
+      "ablation_delta_mae": 19.014129638671875
+    },
+    {
+      "feature": "global load",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 421.11749267578125,
+      "permutation_delta_mae": 46.1761474609375,
+      "ablation_mae": 381.5030517578125,
+      "ablation_delta_mae": 6.56170654296875
+    },
+    {
+      "feature": "local load residual",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 385.5735778808594,
+      "permutation_delta_mae": 10.632232666015625,
+      "ablation_mae": 369.46539306640625,
+      "ablation_delta_mae": -5.4759521484375
+    },
+    {
+      "feature": "global net flow",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 374.94134521484375,
+      "permutation_delta_mae": 0.0,
+      "ablation_mae": 374.94134521484375,
+      "ablation_delta_mae": 0.0
+    },
+    {
+      "feature": "global residual",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 373.6266784667969,
+      "permutation_delta_mae": -1.314666748046875,
+      "ablation_mae": 368.0960998535156,
+      "ablation_delta_mae": -6.845245361328125
+    },
+    {
+      "feature": "global imbalance",
+      "baseline_validation_mae": 374.94134521484375,
+      "permutation_mae": 368.6156311035156,
+      "permutation_delta_mae": -6.325714111328125,
+      "ablation_mae": 360.1060791015625,
+      "ablation_delta_mae": -14.83526611328125
+    }
+  ]
+}

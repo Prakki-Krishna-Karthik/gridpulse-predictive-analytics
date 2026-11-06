@@ -1,0 +1,179 @@
+{
+  "selected_model": "persistence",
+  "selected_label": "Persistence",
+  "selection_rule": "lowest pooled RMSE on chronological walk-forward holdout",
+  "metrics": [
+    {
+      "model": "persistence",
+      "label": "Persistence",
+      "target": "country net flow (MW)",
+      "mae": 375.8313492063492,
+      "rmse": 580.3309231332947,
+      "mape": 0.6104239588805228,
+      "accuracy": 0.9136904761904762,
+      "precision": 0.8132774329475364,
+      "recall": 0.8107193507460174,
+      "f1": 0.8119921971430091,
+      "per_class": {
+        "Normal": {
+          "precision": 0.961220597584234,
+          "recall": 0.9630573248407643,
+          "f1": 0.9621380846325168
+        },
+        "Warning": {
+          "precision": 0.6208530805687204,
+          "recall": 0.6150234741784038,
+          "f1": 0.6179245283018868
+        },
+        "Critical": {
+          "precision": 0.8577586206896551,
+          "recall": 0.8540772532188842,
+          "f1": 0.8559139784946237
+        }
+      },
+      "validation": "walk-forward, chronological holdout",
+      "n_predictions": 2016
+    },
+    {
+      "model": "moving_average",
+      "label": "24h moving average",
+      "target": "country net flow (MW)",
+      "mae": 947.1078972387565,
+      "rmse": 1363.4297054290978,
+      "mape": 2.2760022666641304,
+      "accuracy": 0.8134920634920635,
+      "precision": 0.6151549110143771,
+      "recall": 0.5551255068446515,
+      "f1": 0.5791042789740966,
+      "per_class": {
+        "Normal": {
+          "precision": 0.880071599045346,
+          "recall": 0.9394904458598726,
+          "f1": 0.9088108441158349
+        },
+        "Warning": {
+          "precision": 0.2619047619047619,
+          "recall": 0.20657276995305165,
+          "f1": 0.23097112860892388
+        },
+        "Critical": {
+          "precision": 0.7034883720930233,
+          "recall": 0.51931330472103,
+          "f1": 0.5975308641975309
+        }
+      },
+      "validation": "walk-forward, chronological holdout",
+      "n_predictions": 2016
+    },
+    {
+      "model": "linear_trend",
+      "label": "Linear trend",
+      "target": "country net flow (MW)",
+      "mae": 1156.8869414071487,
+      "rmse": 1604.8043534719247,
+      "mape": 2.0561297576953828,
+      "accuracy": 0.7440476190476191,
+      "precision": 0.4967049041186653,
+      "recall": 0.5413830879905972,
+      "f1": 0.5123828207610922,
+      "per_class": {
+        "Normal": {
+          "precision": 0.9135546334716459,
+          "recall": 0.8414012738853504,
+          "f1": 0.8759946949602122
+        },
+        "Warning": {
+          "precision": 0.1572052401746725,
+          "recall": 0.16901408450704225,
+          "f1": 0.16289592760180996
+        },
+        "Critical": {
+          "precision": 0.41935483870967744,
+          "recall": 0.6137339055793991,
+          "f1": 0.49825783972125437
+        }
+      },
+      "validation": "walk-forward, chronological holdout",
+      "n_predictions": 2016
+    },
+    {
+      "model": "seasonal_naive",
+      "label": "Seasonal naive (24h)",
+      "target": "country net flow (MW)",
+      "mae": 1310.4915674603174,
+      "rmse": 1994.6832993224098,
+      "mape": 3.2422602885548324,
+      "accuracy": 0.753968253968254,
+      "precision": 0.5125321984801401,
+      "recall": 0.5190954119481628,
+      "f1": 0.5156238748127203,
+      "per_class": {
+        "Normal": {
+          "precision": 0.8714833759590793,
+          "recall": 0.8681528662420382,
+          "f1": 0.8698149329929802
+        },
+        "Warning": {
+          "precision": 0.18627450980392157,
+          "recall": 0.1784037558685446,
+          "f1": 0.18225419664268583
+        },
+        "Critical": {
+          "precision": 0.4798387096774194,
+          "recall": 0.5107296137339056,
+          "f1": 0.49480249480249483
+        }
+      },
+      "validation": "walk-forward, chronological holdout",
+      "n_predictions": 2016
+    }
+  ],
+  "validation_curve": [
+    {
+      "window_days": 56,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    },
+    {
+      "window_days": 70,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    },
+    {
+      "window_days": 84,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    },
+    {
+      "window_days": 98,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    },
+    {
+      "window_days": 112,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    },
+    {
+      "window_days": 126,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    },
+    {
+      "window_days": 140,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    },
+    {
+      "window_days": 154,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    },
+    {
+      "window_days": 168,
+      "train_mae": 0.0,
+      "validation_mae": 0.0
+    }
+  ],
+  "note": "Classical baselines are used because this dataset has no ground-truth engineering labels or complete line parameters. A GNN can be added after a leakage-safe benchmark is established."
+}

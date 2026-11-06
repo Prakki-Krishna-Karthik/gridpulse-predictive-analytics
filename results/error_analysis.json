@@ -1,0 +1,128 @@
+{
+  "model": "Fusion GRU",
+  "successes": [
+    {
+      "country": "SE",
+      "timestamp": "2024-12-26 20:00:00+00:00",
+      "index": 837,
+      "actual_net_flow_mw": -5067.0,
+      "predicted_net_flow_mw": -5067.171875,
+      "absolute_error_mw": 0.171875,
+      "actual_class": "Warning",
+      "predicted_class": "Warning",
+      "local_load_mw": 15375.0,
+      "local_imbalance_ratio": -1.0
+    },
+    {
+      "country": "NO",
+      "timestamp": "2024-12-27 15:00:00+00:00",
+      "index": 856,
+      "actual_net_flow_mw": -4365.0,
+      "predicted_net_flow_mw": -4365.42041015625,
+      "absolute_error_mw": 0.42041015625,
+      "actual_class": "Warning",
+      "predicted_class": "Warning",
+      "local_load_mw": 18828.0,
+      "local_imbalance_ratio": -1.0
+    },
+    {
+      "country": "DK",
+      "timestamp": "2024-12-25 16:00:00+00:00",
+      "index": 809,
+      "actual_net_flow_mw": 974.25,
+      "predicted_net_flow_mw": 975.158935546875,
+      "absolute_error_mw": 0.908935546875,
+      "actual_class": "Normal",
+      "predicted_class": "Normal",
+      "local_load_mw": 4296.0,
+      "local_imbalance_ratio": 0.15128692984580994
+    },
+    {
+      "country": "AT",
+      "timestamp": "2024-12-26 12:00:00+00:00",
+      "index": 829,
+      "actual_net_flow_mw": 1226.25,
+      "predicted_net_flow_mw": 1227.2021484375,
+      "absolute_error_mw": 0.9521484375,
+      "actual_class": "Normal",
+      "predicted_class": "Normal",
+      "local_load_mw": 6397.0,
+      "local_imbalance_ratio": 0.7030242085456848
+    },
+    {
+      "country": "BE",
+      "timestamp": "2024-12-26 05:00:00+00:00",
+      "index": 822,
+      "actual_net_flow_mw": 3123.0,
+      "predicted_net_flow_mw": 3121.688232421875,
+      "absolute_error_mw": 1.311767578125,
+      "actual_class": "Normal",
+      "predicted_class": "Normal",
+      "local_load_mw": 7969.75,
+      "local_imbalance_ratio": 0.9530057907104492
+    }
+  ],
+  "failures": [
+    {
+      "country": "DE",
+      "timestamp": "2024-12-28 14:00:00+00:00",
+      "index": 879,
+      "actual_net_flow_mw": 7484.5,
+      "predicted_net_flow_mw": 3986.672607421875,
+      "absolute_error_mw": 3497.827392578125,
+      "actual_class": "Critical",
+      "predicted_class": "Warning",
+      "local_load_mw": 50826.75,
+      "local_imbalance_ratio": 0.5974217653274536
+    },
+    {
+      "country": "FR",
+      "timestamp": "2024-12-29 16:00:00+00:00",
+      "index": 905,
+      "actual_net_flow_mw": -1662.5,
+      "predicted_net_flow_mw": -5030.8017578125,
+      "absolute_error_mw": 3368.3017578125,
+      "actual_class": "Normal",
+      "predicted_class": "Warning",
+      "local_load_mw": 62103.0,
+      "local_imbalance_ratio": -0.7476950883865356
+    },
+    {
+      "country": "DE",
+      "timestamp": "2024-12-31 10:00:00+00:00",
+      "index": 947,
+      "actual_net_flow_mw": -9009.0,
+      "predicted_net_flow_mw": -5913.046875,
+      "absolute_error_mw": 3095.953125,
+      "actual_class": "Critical",
+      "predicted_class": "Warning",
+      "local_load_mw": 55480.75,
+      "local_imbalance_ratio": -0.7098451852798462
+    },
+    {
+      "country": "FR",
+      "timestamp": "2024-12-27 17:00:00+00:00",
+      "index": 858,
+      "actual_net_flow_mw": -2867.0,
+      "predicted_net_flow_mw": -5866.8720703125,
+      "absolute_error_mw": 2999.8720703125,
+      "actual_class": "Normal",
+      "predicted_class": "Warning",
+      "local_load_mw": 67335.0,
+      "local_imbalance_ratio": -0.5951837301254272
+    },
+    {
+      "country": "DE",
+      "timestamp": "2024-12-27 04:00:00+00:00",
+      "index": 845,
+      "actual_net_flow_mw": 3662.999755859375,
+      "predicted_net_flow_mw": 6460.69384765625,
+      "absolute_error_mw": 2797.694091796875,
+      "actual_class": "Warning",
+      "predicted_class": "Critical",
+      "local_load_mw": 40661.0,
+      "local_imbalance_ratio": 0.4208409786224365
+    }
+  ],
+  "test_examples": 2016
+}

@@ -1,0 +1,60 @@
+{
+  "dcrnn": {
+    "model": "dcrnn",
+    "label": "DCRNN",
+    "mae": 436.21551513671875,
+    "rmse": 633.9649658203125,
+    "mape": 0.7520692348480225,
+    "accuracy": 0.9250992063492064,
+    "precision": 0.8534980821228699,
+    "recall": 0.8273472134920672,
+    "f1": 0.8384719184223205,
+    "inference_time_ms": 63.63250000140397,
+    "source": "trained in this experiment run"
+  },
+  "fusion_gru": {
+    "model": "fusion_gru",
+    "label": "Fusion GRU",
+    "mae": 400.26220703125,
+    "rmse": 570.4879150390625,
+    "mape": 0.7097617387771606,
+    "accuracy": 0.9270833333333334,
+    "precision": 0.8519271866467988,
+    "recall": 0.8616847363471184,
+    "f1": 0.8564685137106244,
+    "inference_time_ms": 34.732400003122166,
+    "source": "trained in this experiment run"
+  },
+  "operational_baseline": {
+    "model": "persistence",
+    "label": "Persistence",
+    "rmse": 580.3309231332947,
+    "mae": 375.8313492063492,
+    "mape": 0.6104239588805228,
+    "accuracy": 0.9136904761904762,
+    "precision": 0.8132774329475364,
+    "recall": 0.8107193507460174,
+    "f1": 0.8119921971430091,
+    "inference_time_ms": 0.44780000098398887,
+    "source": "existing chronological baseline artifact"
+  },
+  "research_winner": {
+    "model": "fusion_gru",
+    "label": "Fusion GRU",
+    "mae": 400.26220703125,
+    "rmse": 570.4879150390625,
+    "mape": 0.7097617387771606,
+    "accuracy": 0.9270833333333334,
+    "precision": 0.8519271866467988,
+    "recall": 0.8616847363471184,
+    "f1": 0.8564685137106244,
+    "inference_time_ms": 34.732400003122166,
+    "source": "trained in this experiment run"
+  },
+  "diagnosis": [
+    "DCRNN applies forward and reverse graph diffusion before each recurrent update, so neighboring countries share hidden state information.",
+    "Its comparison uses the same 24-hour lookback, training-only scaling, chronological validation, and 168-hour test horizon as Fusion GRU.",
+    "A stronger DCRNN score would support graph context; a weaker score is still useful evidence because the topology and training protocol remain fixed.",
+    "The model is a forecasting benchmark. It does not solve power-flow equations or authorize switching and dispatch actions."
+  ]
+}

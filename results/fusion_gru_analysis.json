@@ -1,0 +1,33 @@
+{
+  "selected_baseline": {
+    "model": "persistence",
+    "label": "Persistence",
+    "rmse": 580.3309231332947,
+    "mae": 375.8313492063492,
+    "mape": 0.6104239588805228,
+    "accuracy": 0.9136904761904762,
+    "precision": 0.8132774329475364,
+    "recall": 0.8107193507460174,
+    "f1": 0.8119921971430091,
+    "inference_time_ms": 0.44780000098398887,
+    "source": "existing chronological baseline artifact"
+  },
+  "fusion_gru": {
+    "model": "fusion_gru",
+    "label": "Fusion GRU",
+    "mae": 400.26220703125,
+    "rmse": 570.4879150390625,
+    "mape": 0.7097617387771606,
+    "accuracy": 0.9270833333333334,
+    "precision": 0.8519271866467988,
+    "recall": 0.8616847363471184,
+    "f1": 0.8564685137106244,
+    "inference_time_ms": 34.732400003122166,
+    "source": "trained in this experiment run"
+  },
+  "diagnosis": [
+    "Fusion GRU does not lag the selected baseline on this run; its improvement is measured rather than assumed.",
+    "The comparison still shows why a baseline matters: it is simpler, faster, and easier to audit.",
+    "The supplied data lacks physical line ratings, dispatch constraints, and market shocks, so gains may not generalize."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "steps": [
+    {
+      "step": 1,
+      "name": "Parse",
+      "detail": "Read both CSVs with UTF-8 BOM handling and parse UTC timestamps."
+    },
+    {
+      "step": 2,
+      "name": "Validate",
+      "detail": "Count missing cells, duplicate keys, invalid country codes, and hourly gaps."
+    },
+    {
+      "step": 3,
+      "name": "Canonicalize",
+      "detail": "Map each interconnector to sorted endpoint ID and keep raw aliases for audit."
+    },
+    {
+      "step": 4,
+      "name": "Align",
+      "detail": "Retain the common recent history and align country features by hourly timestamp."
+    },
+    {
+      "step": 5,
+      "name": "Scale",
+      "detail": "Fit feature and target mean/std only on the training window, then apply to validation and test."
+    },
+    {
+      "step": 6,
+      "name": "Split",
+      "detail": "Use the final 168 hours as a chronological holdout; no random shuffle crosses the split."
+    },
+    {
+      "step": 7,
+      "name": "Evaluate",
+      "detail": "Compare classical baselines, Fusion GRU, and DCRNN on the same target and holdout."
+    }
+  ],
+  "sequence_length_hours": 24,
+  "window_stride_hours": 4,
+  "test_horizon_hours": 168,
+  "train_samples_fusion_gru": 1800,
+  "validation_samples_fusion_gru": 504,
+  "test_samples_fusion_gru": 2016,
+  "warning_threshold_mw": 3550.4375,
+  "critical_threshold_mw": 5941.39990234375,
+  "threshold_rule": "absolute net-flow magnitude at the 75th and 90th training quantiles"
+}

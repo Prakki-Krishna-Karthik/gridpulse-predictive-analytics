@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+
+# The raw CSVs are supplied outside this project. Keep generated compact
+# artifacts under data/processed so the demo can run without the raw files.
+data/raw/

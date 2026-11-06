@@ -1,0 +1,29 @@
+{
+  "model": "Fusion GRU",
+  "labels": [
+    "Normal",
+    "Warning",
+    "Critical"
+  ],
+  "matrix": {
+    "Normal": {
+      "Normal": 1490,
+      "Warning": 58,
+      "Critical": 0
+    },
+    "Warning": {
+      "Normal": 37,
+      "Warning": 260,
+      "Critical": 25
+    },
+    "Critical": {
+      "Normal": 0,
+      "Warning": 27,
+      "Critical": 119
+    }
+  },
+  "thresholds": {
+    "warning": 3550.4375,
+    "critical": 5941.39990234375
+  }
+}
