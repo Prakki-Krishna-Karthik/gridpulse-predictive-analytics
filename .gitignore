@@ -7,3 +7,7 @@ node_modules/
 # The raw CSVs are supplied outside this project. Keep generated compact
 # artifacts under data/processed so the demo can run without the raw files.
 data/raw/
+
+# Generated local artifacts
+.codex-*/
+.chart-data-*/
